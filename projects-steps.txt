@@ -12,3 +12,21 @@ npm i --save-dev prisma typescript ts-node @types/node nodemon
         "esModuleInterop": true
     }
 }
+
+npx prisma init --datasource-provider postgresql 
+npx prisma init --datasource-provider mysql
+
+#para formatear el codigo de prisma 
+npx prisma format 
+
+#crea migracion
+npx prisma migrate dev init
+
+#instala el cliente de prisma
+npm i @prisma/client
+
+npx prisma generate
+
+#copiar esta importacion par ausarlo
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
